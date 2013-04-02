@@ -40,6 +40,14 @@ module Defender
     @test_mode = test_mode
   end
 
+  def self.disable
+    !!@disable
+  end
+
+  def self.disable=(disable)
+    @disable = disable
+  end
+
   # Internal: This is for replacing the Defensio backend when running tests.
   def self.defensio=(defensio)
     @defensio = defensio
