@@ -172,7 +172,7 @@ module Defender
       # Raises a Defender::DefenderError if Defensio returns an error. Please
       #   note that this will cancel the save.
       def _defender_before_create
-        return true if Defender.test_mode
+        return true if Defender.disable
         
         data = {}
         _defensio_keys.each do |key, names|
